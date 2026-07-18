@@ -1,38 +1,34 @@
 <div align="center">
 
-<img src="assets/logo-dark.svg" alt="QyverixAI" width="300"/>
+<img src="assets/logo-dark.svg" alt="CodeInsight" width="300"/>
 
 <br/>
 <br/>
 
 <h3>Debug. Understand. Ship faster.</h3>
 
-<p>An open-source AI-powered developer assistant that detects bugs, explains code in plain English,<br/>and gives actionable improvement suggestions - instantly, no account needed.</p>
+<p>A professional AI-powered code analysis platform that helps developers understand source code, detect bugs, improve code quality, and receive actionable suggestions.</p>
 
 <br/>
 
-[![CI](https://github.com/imDarshanGK/AI-dev-assistant/actions/workflows/ci.yml/badge.svg)](https://github.com/imDarshanGK/AI-dev-assistant/actions)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Python](https://img.shields.io/badge/Python-3.12+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GSSoC 2026](https://img.shields.io/badge/GSSoC-2026-FF6B35?logoColor=white)](https://gssoc.girlscript.tech)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](#)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](#)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](#)
+[![Render](https://img.shields.io/badge/Render-46E3B7?logo=render&logoColor=white)](#)
 
 <br/>
 
-**[Live Demo](https://qyverixai.onrender.com)** &nbsp;·&nbsp; **[API Docs](https://qyverixai.onrender.com/docs)** &nbsp;·&nbsp; **[Contributing Guide](CONTRIBUTING.md)** &nbsp;·&nbsp; **[Good First Issues](https://github.com/imDarshanGK/AI-dev-assistant/labels/good%20first%20issue)**
-
-<br/>
-
-> **GSSoC 2026 Contributors** -- Welcome! Read [CONTRIBUTING.md](CONTRIBUTING.md) for setup, then grab a [good first issue](https://github.com/imDarshanGK/AI-dev-assistant/labels/good%20first%20issue) to get started.
+**[Live Demo](https://codeinsight.onrender.com)** &nbsp;·&nbsp; **[API Docs](https://codeinsight.onrender.com/docs)**
 
 </div>
 
 ---
 
-## What is QyverixAI?
+## What is CodeInsight?
 
-QyverixAI is a code analysis workspace. Paste any code and get three things back instantly:
+CodeInsight is a professional code analysis workspace. Paste any code and get three things back instantly:
 
 | | What you get |
 |---|---|
@@ -40,14 +36,14 @@ QyverixAI is a code analysis workspace. Paste any code and get three things back
 | **Debug** | 40+ pattern checks across 5 languages with exact line numbers, code snippets, and fix suggestions |
 | **Improve** | Documentation gaps, error handling, testing, type safety - plus a 0–100 quality score and letter grade A–F |
 
-No account required. No API key needed. Works fully offline. Fully open source.
+No account required. No API key needed. Works fully offline.
 
 ---
 
 ## Preview
 
 <!-- Add a screenshot of the live site here -->
-<!-- ![QyverixAI Preview](assets/preview.png) -->
+<!-- ![CodeInsight Preview](assets/preview.png) -->
 
 ---
 
@@ -92,7 +88,7 @@ No account required. No API key needed. Works fully offline. Fully open source.
 ### 1 - Clone
 
 ```bash
-git clone https://github.com/imDarshanGK/AI-dev-assistant.git
+git clone https://github.com/peeyoush/AI-dev-assistant.git
 cd AI-dev-assistant
 ```
 
@@ -211,7 +207,7 @@ All three analyses in one response with timing.
 ```json
 {
   "provider": "rule-based",
-  "model": "qyverix-engine-v3",
+  "model": "codeinsight-engine-v3",
   "explanation": { "...": "..." },
   "debugging":   { "...": "..." },
   "suggestions": { "...": "..." },
@@ -252,7 +248,6 @@ AI-dev-assistant/
 ├── .env.example
 ├── Dockerfile
 ├── render.yaml
-├── CONTRIBUTING.md
 └── README.md
 ```
 
@@ -267,7 +262,7 @@ pytest -v
 
 22 tests covering all endpoints, all 5 languages, 10+ individual bug patterns, suggestions scoring, full analysis, and edge cases including empty code, unicode, and single-line input.
 
-Tests run automatically on every push and pull request via GitHub Actions across Python 3.11 and 3.12.
+Tests run automatically on every push via GitHub Actions across Python 3.11 and 3.12.
 
 ---
 
@@ -275,26 +270,25 @@ Tests run automatically on every push and pull request via GitHub Actions across
 
 ### Render - recommended, free tier
 
-1. Fork this repository
-2. Go to [render.com](https://render.com) → New Web Service
-3. Connect your fork - `render.yaml` configures everything automatically
-4. Add environment variable: `PYTHON_VERSION` = `3.12.0`
-5. Click Deploy - your app goes live at `https://your-service.onrender.com`
+1. Go to [render.com](https://render.com) → New Web Service
+2. Connect your repository - `render.yaml` configures everything automatically
+3. Add environment variable: `PYTHON_VERSION` = `3.12.0`
+4. Click Deploy - your app goes live at `https://your-service.onrender.com`
 
 > **Note:** The free tier sleeps after 15 minutes of inactivity. The first request after sleep takes 30–60 seconds to wake up. This is expected.
 
 ### Docker
 
 ```bash
-docker build -t qyverixai .
-docker run -p 8000:8000 qyverixai
+docker build -t codeinsight .
+docker run -p 8000:8000 codeinsight
 ```
 
 ---
 
 ## Optional LLM Integration
 
-QyverixAI works fully offline with its built-in rule-based engine. To enable richer AI-powered analysis, add these environment variables:
+CodeInsight works fully offline with its built-in rule-based engine. To enable richer AI-powered analysis, add these environment variables:
 
 ```env
 LLM_ENABLED=true
@@ -338,43 +332,6 @@ Copy `.env.example` to `.env` and fill in values as needed.
 
 ---
 
-## Contributing
-
-QyverixAI is a **GSSoC 2026** open source project. Contributors of all levels are welcome.
-
-```bash
-# 1. Fork the repo on GitHub
-# 2. Clone your fork
-git clone https://github.com/YOUR_USERNAME/AI-dev-assistant.git
-
-# 3. Create a branch
-git checkout -b feat/your-feature-name
-
-# 4. Install and test
-cd backend && pip install -r requirements.txt
-pytest -v   # all 22 tests must pass
-
-# 5. Push and open a pull request
-```
-
-Read the full workflow, code standards, and pattern guide in [CONTRIBUTING.md](CONTRIBUTING.md).
-
-### Good first issues for GSSoC contributors
-
-| Task | Label |
-|---|---|
-| Add a new bug detection pattern for any language | `easy` |
-| Add test cases for edge cases | `easy` |
-| Improve explanation key points for a specific language | `easy` |
-| Add ARIA labels and keyboard navigation to frontend | `medium` |
-| Add support for a new file type in file upload | `medium` |
-| Build AST-based deep analysis for Python | `hard` |
-| Add VS Code extension | `hard` |
-
-Browse all open issues: [github.com/imDarshanGK/AI-dev-assistant/issues](https://github.com/imDarshanGK/AI-dev-assistant/issues)
-
----
-
 ## Roadmap
 
 - [x] Rule-based code explanation engine
@@ -395,22 +352,10 @@ Browse all open issues: [github.com/imDarshanGK/AI-dev-assistant/issues](https:/
 
 ---
 
-## License
-
-MIT © [Darshan G K](https://github.com/imDarshanGK)
-
----
-
 <div align="center">
 
 <br/>
 
-**[Star this repo](https://github.com/imDarshanGK/AI-dev-assistant)** &nbsp;·&nbsp;
-**[Report a bug](https://github.com/imDarshanGK/AI-dev-assistant/issues/new?template=bug_report.md)** &nbsp;·&nbsp;
-**[Request a feature](https://github.com/imDarshanGK/AI-dev-assistant/issues/new?template=feature_request.md)**
 
-<br/>
-
-Built for the open source community &nbsp;·&nbsp; GSSoC 2026
 
 </div>

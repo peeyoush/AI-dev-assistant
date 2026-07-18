@@ -123,7 +123,7 @@ class LLMAnalysisClient:
 
     async def chat_reply(self, message: str, code: str | None, history: list[str], level: str) -> str:
         prompt = (
-            "You are QyverixAI coding assistant in chat mode. "
+            "You are CodeInsight coding assistant in chat mode. "
             f"Explain at {level} level, be clear and concrete, and avoid generic text."
         )
 

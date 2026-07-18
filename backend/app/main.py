@@ -1,5 +1,5 @@
 """
-QyverixAI — Backend API
+CodeInsight — Backend API
 FastAPI application with advanced middleware, rate limiting, and full analysis engine.
 """
 
@@ -37,14 +37,14 @@ def check_rate_limit(ip: str) -> None:
 # ── Lifespan ──────────────────────────────────────────────────────────────────
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    print("🚀 QyverixAI backend starting…")
+    print("🚀 CodeInsight backend starting…")
     yield
-    print("🛑 QyverixAI backend shutting down…")
+    print("🛑 CodeInsight backend shutting down…")
 
 
 # ── App ───────────────────────────────────────────────────────────────────────
 app = FastAPI(
-    title="QyverixAI",
+    title="CodeInsight",
     description="AI-powered developer assistant — code explanation, debugging, and improvement.",
     version="3.0.0",
     docs_url="/docs",
@@ -75,7 +75,7 @@ async def add_process_time_header(request: Request, call_next):
     response = await call_next(request)
     elapsed = (time.perf_counter() - start) * 1000
     response.headers["X-Process-Time-Ms"] = f"{elapsed:.2f}"
-    response.headers["X-QyverixAI-Version"] = "3.0.0"
+    response.headers["X-CodeInsight-Version"] = "3.0.0"
     return response
 
 
@@ -92,7 +92,7 @@ async def root():
     return {
         "status": "ok",
         "version": "3.0.0",
-        "message": "QyverixAI API is running.",
+        "message": "CodeInsight API is running.",
         "endpoints": ["/explanation/", "/debugging/", "/suggestions/", "/analyze/"],
     }
 
@@ -102,7 +102,7 @@ async def health_check():
     return {
         "status": "ok",
         "version": "3.0.0",
-        "message": "QyverixAI is healthy",
+        "message": "CodeInsight is healthy",
         "endpoints": ["/explanation/", "/debugging/", "/suggestions/", "/analyze/"],
     }
 

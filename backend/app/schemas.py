@@ -1,4 +1,4 @@
-"""Pydantic request / response models for QyverixAI."""
+"""Pydantic request / response models for CodeInsight."""
 
 from __future__ import annotations
 from pydantic import BaseModel, field_validator

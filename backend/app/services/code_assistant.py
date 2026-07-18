@@ -1,5 +1,5 @@
 """
-QyverixAI — Rule-Based Code Analysis Engine
+CodeInsight — Rule-Based Code Analysis Engine
 Covers 40+ patterns across Python, JavaScript, TypeScript, Java, C++.
 """
 

@@ -1,5 +1,5 @@
 """
-QyverixAI — Test Suite
+CodeInsight — Test Suite
 Run: cd backend && pytest -v
 """
 import pytest
