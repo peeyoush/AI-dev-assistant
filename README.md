@@ -20,7 +20,7 @@
 
 <br/>
 
-**[Live Demo](https://codeinsight.onrender.com)** &nbsp;·&nbsp; **[API Docs](https://codeinsight.onrender.com/docs)**
+
 
 </div>
 
