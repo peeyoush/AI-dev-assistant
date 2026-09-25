@@ -9,8 +9,3 @@ services:
         value: 30
       - key: LLM_ENABLED
         value: false
-    staticPublishPath: frontend
-    routes:
-      - type: rewrite
-        source: /app
-        destination: /frontend/index.html
