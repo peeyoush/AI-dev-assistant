@@ -41,4 +41,4 @@ logs/
 .dockerignore
 
 # Node (if frontend tooling added later)
-node_modules/
+node_modules//codeinsight_reverse_engineering_knowledge_document.md
